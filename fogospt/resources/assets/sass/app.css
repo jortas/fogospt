@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "&.": expected class name, was "87D37C"
-        on line 531 of app.scss
+        on line 536 of app.scss
 
-526: 
-527:   &.CE773C {
-528:     background-image: url('https://fogos.pt/assets/images/markers/CE773C.png');
-529:   }
-530: 
-531:   &.87D37C {
-532:     background-image: url('https://fogos.pt/assets/images/markers/66FF33.png');
-533:   }
-534: }
+531: 
+532:   &.CE773C {
+533:     background-image: url('https://fogos.pt/assets/images/markers/CE773C.png');
+534:   }
 535: 
-536: //.fire-status {
+536:   &.87D37C {
+537:     background-image: url('https://fogos.pt/assets/images/markers/66FF33.png');
+538:   }
+539: }
+540: 
+541: //.fire-status {
 
 Backtrace:
-app.scss:531
+app.scss:536
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1278:in `expected'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1208:in `expected'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1203:in `tok!'
@@ -74,4 +74,4 @@ app.scss:531
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"&.\": expected class name, was \"87D37C\"\A         on line 531 of app.scss\A \A 526: \A 527:   &.CE773C {\A 528:     background-image: url('https://fogos.pt/assets/images/markers/CE773C.png');\A 529:   }\A 530: \A 531:   &.87D37C {\A 532:     background-image: url('https://fogos.pt/assets/images/markers/66FF33.png');\A 533:   }\A 534: }\A 535: \A 536: //.fire-status {"; }
+  content: "Error: Invalid CSS after \"&.\": expected class name, was \"87D37C\"\A         on line 536 of app.scss\A \A 531: \A 532:   &.CE773C {\A 533:     background-image: url('https://fogos.pt/assets/images/markers/CE773C.png');\A 534:   }\A 535: \A 536:   &.87D37C {\A 537:     background-image: url('https://fogos.pt/assets/images/markers/66FF33.png');\A 538:   }\A 539: }\A 540: \A 541: //.fire-status {"; }

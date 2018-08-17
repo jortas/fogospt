@@ -267,6 +267,8 @@ main .sidebar {
   background: #f5f5f5;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 main .sidebar.active {
@@ -275,6 +277,12 @@ main .sidebar.active {
 
 main .sidebar .row {
   margin: 0;
+}
+
+main #closeButtonSidebar {
+  text-align: center;
+  margin-right: 1rem;
+  margin-left: auto;
 }
 
 main .card {
@@ -286,10 +294,6 @@ main .card {
 
 main .card .table {
   margin-top: 1rem;
-}
-
-main .card.stats {
-  margin-bottom: 2rem;
 }
 
 main .extra {

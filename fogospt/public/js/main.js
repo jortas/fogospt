@@ -17,11 +17,14 @@ $(document).ready(function () {
 
     addRisk(mymap);
     mymap.on('click', function (e) {
-        mymap.setView(e.latlng);
-        window.history.pushState('obj', 'Fogos.pt', '/');
-        $('.sidebar').removeClass('active');
-        $('#map').find('.active').removeClass('active');
+        closeSidebar(mymap, e);
     });
+
+    //var closeSidebarButton = document.getElementById('closeButtonSidebar');
+    //closeSidebarButton.onclick = function(e){
+     //   closeSidebar(mymap, e);
+    //};
+
 
     var res = window.location.pathname.match(/^\/fogo\/(\d+)/);
     if (res && res.length === 2) {
@@ -287,11 +290,7 @@ function addMaker(item, mymap) {
 
 
     marker.on('click', function (e) {
-        var previouslyActive = $('#map').find('.active');
-        if (previouslyActive.length){
-            changeElementSizeById(previouslyActive[0].id, (parseFloat(previouslyActive[0].style.height) - 48) * BASE_SIZE);
-            previouslyActive.removeClass('active');
-        }
+        disablePreviouslyActive();
         changeElementSizeById(marker.id, 48 + marker.sizeFactor);
         mymap.setView(e.latlng, 10);
 
@@ -317,6 +316,8 @@ function addMaker(item, mymap) {
     });
 
 }
+
+
 
 
 
@@ -516,7 +517,7 @@ function addRisk(mymap) {
                                             },
                                         });
 
-                                        var baseMaps = {
+                                        var base = {
                                                 'Desativar Risco':  L.tileLayer(''),
                                                 'Risco Hoje': riskToday,
                                                 'Risco Amanhã': riskTomorrow,
@@ -611,3 +612,24 @@ function changeElementSizeById(id, size){
 }
 
 
+/*****************************
+ ********** SIDEBAR **********
+ *****************************
+ */
+
+
+
+function closeSidebar(mymap, e){
+    mymap.setView(e.latlng);
+    window.history.pushState('obj', 'Fogos.pt', '/');
+    $('.sidebar').removeClass('active');
+    disablePreviouslyActive();
+}
+
+function disablePreviouslyActive() {
+    var previouslyActive = $('#map').find('.active');
+    if (previouslyActive.length){
+        changeElementSizeById(previouslyActive[0].id, (parseFloat(previouslyActive[0].style.height) - 48) * BASE_SIZE);
+        previouslyActive.removeClass('active');
+    }
+}

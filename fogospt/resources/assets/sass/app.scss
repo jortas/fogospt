@@ -233,6 +233,8 @@ main {
     width: 100%;
     background: #f5f5f5;
     flex-basis: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     &.active {
       display: block;
@@ -243,6 +245,13 @@ main {
     }
   }
 
+  #closeButtonSidebar{
+    text-align: center;
+    margin-right: 1rem;
+    margin-left: auto;
+
+  }
+
   .card {
     margin-bottom: 1rem;
     border: 0;
@@ -251,10 +260,6 @@ main {
     //overflow: hidden;
     .table {
       margin-top: 1rem;
-    }
-
-    &.stats{
-      margin-bottom: 2rem;
     }
   }
 

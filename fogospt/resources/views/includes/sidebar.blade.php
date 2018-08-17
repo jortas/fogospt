@@ -1,5 +1,6 @@
 @isset($fire)
     <div class="sidebar active">
+        <button class="card" id="closeButtonSidebar" type="button" >&#10005</button>
 @endisset
 
 @empty($fire)
